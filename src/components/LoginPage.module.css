@@ -25,16 +25,11 @@ body,
     max-height: 535px;
 }
 
-/* .logoContain {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-} */
-
 h2 {
   margin-top: 32px;
   margin-bottom: 16px;
 }
+
 h4 {
 font-weight: 400;
 font-size: 16px;
@@ -144,7 +139,5 @@ button {
 }
 
 #formToRegister {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+text-align: center;
 }

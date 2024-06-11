@@ -1,13 +1,16 @@
 import React from 'react';
-import './App.css';
 import { Login } from './components/LoginPage';
 import { Routes, Route } from 'react-router-dom'
+import { HomePage } from './components/HomePage';
+import { RegPage } from './components/RegPage';
 
 function App() {
   return (
-    // <Routes>
-        <Login />
-    // </Routes>
+    <Routes>
+      <Route path="/" element={ <HomePage />} />
+      <Route path="/login" element={<Login />} />
+      <Route path="/register" element={<RegPage />} />
+    </Routes>
   );
 }
 

@@ -1,8 +1,0 @@
-.logoContain {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    flex-direction: column;
-    max-width: 340px;
-    max-height: 535px;
-}

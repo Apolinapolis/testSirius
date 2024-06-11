@@ -1,0 +1,8 @@
+@font-face {
+  font-family: 'Circe Rounded';
+  src: url(./fonts/CirceRounded-Regular.ttf);
+}
+
+* {
+  box-sizing: border-box;
+}

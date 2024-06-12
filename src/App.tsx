@@ -1,15 +1,15 @@
-import React from 'react';
-import { Login } from './components/LoginPage';
 import { Routes, Route } from 'react-router-dom'
 import { HomePage } from './components/HomePage';
-import { RegPage } from './components/RegPage';
+import { RegisterPage } from './components/SignUp';
+import { Login } from './components/Login';
+
 
 function App() {
   return (
     <Routes>
       <Route path="/" element={ <HomePage />} />
       <Route path="/login" element={<Login />} />
-      <Route path="/register" element={<RegPage />} />
+      <Route path="/register" element={<RegisterPage />} />
     </Routes>
   );
 }

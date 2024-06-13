@@ -6,6 +6,7 @@ import { setUser } from "../store/slices/userSlice"
 import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
 import { useNavigate } from 'react-router-dom';
 import { useAppDispatch } from "../hooks/redux-hooks"
+import { useState } from "react"
 
 
 
@@ -14,7 +15,7 @@ export function Login() {
     const dispatch = useAppDispatch()
     const navigate = useNavigate();
 
-    const handleLogin = (email:string, password: string) => {
+    const handleLogin = (email: string, password: string) => {
         const auth = getAuth();
 
         signInWithEmailAndPassword(auth, email, password)
@@ -25,11 +26,12 @@ export function Login() {
                     token: user.refreshToken,
                 }));
                 navigate("/")
-               
+
             })
             .catch(() => alert('invalid user'))
-
     }
+
+    const [lang, setLang] = useState(true)
 
 
 
@@ -49,7 +51,7 @@ export function Login() {
                         <Link to="/register" className={styles.escapeHatches_item}>Зарегистрироваться</Link>
                     </div>
                 </div>
-
+                <div className={styles.lang} onClick={() => setLang(!lang)}>{lang ? <h3>RU <span>EN</span></h3> : <h3><span>RU</span> EN</h3>}</div>
             </div>
         </div>
     )

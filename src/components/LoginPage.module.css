@@ -17,12 +17,12 @@ body,
 }
 
 .logoContain {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    flex-direction: column;
-    max-width: 340px;
-    max-height: 535px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+  max-width: 340px;
+  max-height: 535px;
 }
 
 h2 {
@@ -32,11 +32,11 @@ h2 {
 }
 
 h4 {
-font-weight: 400;
-font-size: 16px;
-color: #323854;
-margin: 0;
-margin-bottom: 9px;
+  font-weight: 400;
+  font-size: 16px;
+  color: #323854;
+  margin: 0;
+  margin-bottom: 9px;
 }
 
 input {
@@ -129,7 +129,7 @@ button {
 .escapeHatches {
   display: flex;
   align-items: center;
-  justify-content:space-between;
+  justify-content: space-between;
   margin-bottom: 64px;
 }
 
@@ -141,5 +141,21 @@ button {
 }
 
 #formToRegister {
-text-align: center;
+  text-align: center;
+}
+
+.lang {
+  margin-top: 109px;
+  cursor: pointer;
+  text-align: center;
+  font-weight: 400;
+  font-size: 24px;
+  color: #7362bc
+}
+
+.lang span{
+  font-size: 16px;
+
+line-height: 1.35;
+color: #79747f;
 }

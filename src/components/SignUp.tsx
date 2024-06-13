@@ -13,11 +13,11 @@ export function RegisterPage() {
     const dispatch = useAppDispatch()
     const navigate = useNavigate();
 
-    const handleReg = (email:string, password: string) => {
+    const handleReg = (email: string, password: string) => {
         const auth = getAuth();
 
         createUserWithEmailAndPassword(auth, email, password)
-            .then(({user} ) => {
+            .then(({ user }) => {
                 dispatch(setUser({
                     email: user.email,
                     id: user.uid,
@@ -44,7 +44,6 @@ export function RegisterPage() {
                         <Link to="/" className={styles.escapeHatches_item}>На главную</Link>
                     </div>
                 </div>
-
             </div>
         </div>
     )

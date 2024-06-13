@@ -1,0 +1,21 @@
+.calendar {
+    padding: 20px;
+    margin-left: 240px; /* Ассуминг это для sidebar offset */
+  }
+  
+  .calendar-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr); /* Adjust according to your needs */
+    gap: 10px;
+  }
+  
+  .calendar-day {
+    border: 1px solid #ccc;
+    padding: 10px;
+    min-height: 100px;
+  }
+  
+  .day-header {
+    font-weight: bold;
+    margin-bottom: 5px;
+  }

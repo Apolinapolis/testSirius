@@ -1,4 +1,4 @@
-import logo from "../images/Logomark_1_.png"
+import startLogo from "../images/Logomark_1_.png"
 import styles from "./LoginPage.module.css"
 import { Link } from "react-router-dom"
 import { Form } from "./Form"
@@ -38,7 +38,7 @@ export function Login() {
     return (
         <div className={styles.app}>
             <div className="container">
-                <div className={styles.logoContain}><img src={logo} alt="ops" /></div>
+                <div className={styles.logoContain}><img src={startLogo} alt="ops" /></div>
                 <div><h2>Вход в Sirius Future</h2></div>
                 <Form title={"Войти"} onClick={handleLogin} />
                 <div className={styles.escapeHatches}>

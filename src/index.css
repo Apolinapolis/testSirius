@@ -6,3 +6,15 @@
 * {
   box-sizing: border-box;
 }
+
+html,
+body {
+  font-family: 'Circe Rounded';
+  font-weight: 400;
+  font-size: 26px;
+  color: #323854;
+  width: 100%;
+  height: 100%;
+  background-color: #fdfdff;
+  position: relative;
+}

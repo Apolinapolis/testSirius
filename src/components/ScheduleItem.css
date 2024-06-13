@@ -1,0 +1,10 @@
+.schedule-item {
+    background-color: lightgreen;
+    margin-top: 5px;
+    padding: 5px;
+  }
+  
+  .schedule-time,
+  .schedule-subject {
+    font-size: 12px;
+  }

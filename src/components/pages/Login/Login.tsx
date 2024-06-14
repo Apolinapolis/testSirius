@@ -1,11 +1,11 @@
-import startLogo from "../images/Logomark_1_.png"
+import startLogo from "../../../images/Logomark_1_.png" 
 import styles from "./LoginPage.module.css"
 import { Link } from "react-router-dom"
-import { Form } from "./Form"
-import { setUser } from "../store/slices/userSlice"
+import { Form } from "../../Form/Form"
+import { setUser } from "../../../store/slices/userSlice"
 import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
 import { useNavigate } from 'react-router-dom';
-import { useAppDispatch } from "../hooks/redux-hooks"
+import { useAppDispatch } from "../../../hooks/redux-hooks"
 import { useState } from "react"
 
 

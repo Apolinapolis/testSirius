@@ -1,7 +1,7 @@
 import { Routes, Route } from 'react-router-dom'
-import { RegisterPage } from './components/SignUp';
-import { Login } from './components/Login';
-import {SchedulePage} from './components/pages/SchedulePage';
+import { RegisterPage } from './components/pages/SignUp/SignUp';
+import { Login } from './components/pages/Login/Login';
+import {SchedulePage} from './components/pages/Schedule/SchedulePage';
 
 
 function App() {

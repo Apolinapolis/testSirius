@@ -1,0 +1,12 @@
+header {
+    height: 106px;
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+.greeting {
+    font-weight: 400;
+    font-size: 24px;
+    color: #323854;
+}

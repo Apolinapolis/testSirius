@@ -1,5 +1,5 @@
 import { useState, FC} from "react";
-import styles from "./LoginPage.module.css"
+import styles from "../pages/Login/LoginPage.module.css"
 
 interface FormProps {
     title: string;

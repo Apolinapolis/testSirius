@@ -1,16 +1,16 @@
 import React from 'react';
 import './Sidebar.css';
-import logo from '../images/logo.png'
-import home from '../images/left menu icon.png'
-import list from '../images/Group.png'
-import pay from '../images/Path.png'
-import achievement from '../images/cubok.png'
-import training from '../images/train.png'
-import library from '../images/folder-open.png'
-import check from '../images/Vector.png'
-import settings from '../images/sett.png'
-import questions from '../images/9.png'
-import rekl from '../images/Referral.png'
+import logo from '../../images/logo.png'
+import home from '../../images/left menu icon.png'
+import list from '../../images/Group.png'
+import pay from '../../images/Path.png'
+import achievement from '../../images/cubok.png'
+import training from '../../images/train.png'
+import library from '../../images/folder-open.png'
+import check from '../../images/Vector.png'
+import settings from '../../images/sett.png'
+import questions from '../../images/9.png'
+import rekl from '../../images/Referral.png'
 
 
 

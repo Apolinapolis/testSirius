@@ -1,11 +1,11 @@
-import logo from "../images/Logomark_1_.png"
-import styles from "./LoginPage.module.css"
+import logo from "../../../images/Logomark_1_.png"
+import styles from "../Login/LoginPage.module.css"
 import { Link } from "react-router-dom"
-import { Form } from "./Form"
+import { Form } from "../../Form/Form"
 import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
 import { useNavigate } from 'react-router-dom';
-import { setUser } from "../store/slices/userSlice"
-import { useAppDispatch } from "../hooks/redux-hooks"
+import { setUser } from "../../../store/slices/userSlice"
+import { useAppDispatch } from "../../../hooks/redux-hooks"
 
 
 export function RegisterPage() {

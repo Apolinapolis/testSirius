@@ -1,9 +1,8 @@
 import React from 'react';
-import ScheduleItem from './ScheduleItem';
+import ScheduleItem from './ScheduleItem'
 import './Calendar.css';
 
 const Calendar: React.FC = () => {
-  // Example pseudo data
   const schedule = [
     { day: 1, time: '13:00-13:45', subject: 'Математика' },
     { day: 2, time: '13:00-13:45', subject: 'Математика' },

@@ -7,8 +7,11 @@
   box-sizing: border-box;
 }
 
-html,
+
 body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  margin: 0;
   font-family: 'Circe Rounded';
   font-weight: 400;
   font-size: 26px;
@@ -17,4 +20,20 @@ body {
   height: 100%;
   background-color: #fdfdff;
   position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+h2 {
+  margin-top: 32px;
+  margin-bottom: 16px;
+  text-align: center;
+}
+
+h4 {
+  font-weight: 400;
+  font-size: 16px;
+  color: #323854;
+  margin: 0;
+  margin-bottom: 9px;
 }

@@ -1,0 +1,38 @@
+
+
+.head {
+    margin-left: 32px;
+    margin-top: 20px;
+    padding-right: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 0 0 20px 20px;
+    background-color: #fdfdff;
+    grid-area: head;
+}
+
+select {
+    font-family: 'Circe Rounded';
+    appearance: none;
+    background: url("../../images/arrow.png") no-repeat right;
+    background-position-x: calc(100% - 10px);
+    border: 1px solid #ececec;
+    border-radius: 8px;
+    padding: 10px 12px;
+    width: 253px;
+    color: #79747f;
+    
+
+}
+
+button {
+    border: none;
+    font-size: 16px;
+    color: #323854;
+    background: #dbd0fb;
+    border-radius: 30px;
+    padding: 10px 40px;
+    max-width: 344px;
+    height: 40px;
+}

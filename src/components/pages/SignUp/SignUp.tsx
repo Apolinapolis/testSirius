@@ -30,8 +30,7 @@ export function RegisterPage() {
 
 
     return (
-        <div className={styles.app}>
-            <div className="container">
+            <div className={styles.container}>
                 <div className={styles.logoContain}><img src={logo} alt="ops" /></div>
                 <div><h2>Регистрация</h2></div>
                 <Form title={"Подтвердить"} onClick={handleReg} />
@@ -45,6 +44,5 @@ export function RegisterPage() {
                     </div>
                 </div>
             </div>
-        </div>
     )
 }

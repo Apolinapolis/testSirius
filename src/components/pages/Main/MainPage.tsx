@@ -2,7 +2,7 @@ import { Link } from "react-router-dom"
 import { useAuth } from "../../../hooks/useAuth"
 import { removeUser } from "../../../store/slices/userSlice"
 import { useAppDispatch } from "../../../hooks/redux-hooks"
-import Sidebar from '../../Sidebar/Sidebar';
+import {Sidebar} from '../../Sidebar/Sidebar';
 import styles from './SchedulePage.module.css';
 
 

@@ -1,0 +1,105 @@
+.calendarContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: calc(100% - 50px);
+  padding-left: 32px;
+}
+
+.controls {
+  margin-top: 22px;
+  margin-bottom: 12px;
+  height: 32px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+
+}
+
+.dateText {
+  margin: 0;
+  font-weight: 700;
+  font-size: 16px;
+  color: #323854;
+  min-width: 110px;
+}
+
+.arrowBack {
+  width: 24px;
+  height: 24px;
+  margin-right: 16px;
+  background-image: url(../../images/arrowLeft.png);
+}
+
+.arrowForw {
+  margin-left: 16px;
+  width: 24px;
+  height: 24px;
+  background-image: url(../../images/arrowRight.png);
+}
+
+.todayBtn {
+  font-weight: 400;
+  font-size: 12px;
+  color: #323854;
+  border: 1px solid #8d7fc7;
+  border-radius: 15px;
+  width: 85px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 32px;
+  margin-right: 16px;
+}
+
+.weekDays {
+  font-size: 15px;
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  height: 25px;
+  width: 100%;
+  align-items: center;
+  justify-items: end;
+  color: #79747f;
+}
+
+.weekDays>div {
+  margin-right: 5px;
+}
+
+.questionBtn {
+  width: 20px;
+  height: 20px;
+  background-image: url(../../images/question.png);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  width: 100%;
+  height: 65vh
+}
+
+.cell {
+  border: 1px solid #ececec;
+  padding: 4px 2px 2px 2px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: flex-start;
+  font-weight: 300;
+  font-size: 12px;
+  color: #323854;
+
+}
+
+.dateNumber {
+  margin: 4px;
+}
+
+.otherMonth {
+  color: gray;
+}

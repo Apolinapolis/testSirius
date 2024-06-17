@@ -1,12 +1,28 @@
-header {
-    height: 106px;
+.header {
+    padding-left: 32px;
+    margin-bottom: 20px;
+    height: 68px;
     display: flex;
+    align-items: center;
     justify-content: space-between;
-    
+    grid-area: header;
+    border-bottom: 1px solid #f6f6fe;
+    border-radius: 0 0 20px 20px;
+    background-color: #fdfdff;
+    box-shadow: 0 2px 4px 0 rgba(143, 143, 183, 0.07),
+        0 7px 7px 0 rgba(143, 143, 183, 0.06),
+        0 15px 9px 0 rgba(143, 143, 183, 0.04),
+        0 27px 11px 0 rgba(143, 143, 183, 0.01),
+        0 42px 12px 0 rgba(143, 143, 183, 0);
 }
 
 .greeting {
     font-weight: 400;
     font-size: 24px;
     color: #323854;
+    margin-bottom: 20px;
+}
+
+.greeting span {
+    color: #7362bc;
 }

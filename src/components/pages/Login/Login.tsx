@@ -36,8 +36,7 @@ export function Login() {
 
 
     return (
-        <div className={styles.app}>
-            <div className="container">
+            <div className={styles.container}>
                 <div className={styles.logoContain}><img src={startLogo} alt="ops" /></div>
                 <div><h2>Вход в Sirius Future</h2></div>
                 <Form title={"Войти"} onClick={handleLogin} />
@@ -53,6 +52,5 @@ export function Login() {
                 </div>
                 <div className={styles.lang} onClick={() => setLang(!lang)}>{lang ? <h3>RU <span>EN</span></h3> : <h3><span>RU</span> EN</h3>}</div>
             </div>
-        </div>
     )
 }

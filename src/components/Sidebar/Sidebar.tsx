@@ -1,5 +1,5 @@
 import React from 'react';
-import './Sidebar.css';
+import styles from './Sidebar.module.css';
 import logo from '../../images/logo.png'
 import home from '../../images/left menu icon.png'
 import list from '../../images/Group.png'
@@ -14,7 +14,7 @@ import rekl from '../../images/Referral.png'
 
 
 
-const Sidebar: React.FC = () => {
+export const Sidebar: React.FC = () => {
   const items = [
     { text: 'Главная', icon: home },
     { text: 'Расписание', icon: list },
@@ -28,25 +28,23 @@ const Sidebar: React.FC = () => {
   ];
 
   return (
-    <aside className="sidebar">
-      <div className="sidebar-header">
-        <div className="sidebar-logo">
+    <aside className={styles.sidebar}>
+      <div className={styles.sidebarHeader}>
+        <div className={styles.sidebarLogo}>
           <img src={logo} alt="Logo" />
         </div>
       </div>
-      <ul className="sidebar-list">
+      <ul className={styles.sidebarList}>
         {items.map((item, index) => (
-          <li key={index} className={`sidebar-item`}>
+          <li key={index} className={styles.sidebarItem}>
             <img src={item.icon}/>
             {item.text}
           </li>
         ))}
       </ul>
-      <div className="sidebar-footer">
+      <div className={styles.sidebarFooter}>
           <img src={rekl} alt="ops" />
       </div>
     </aside>
   );
 };
-
-export default Sidebar;

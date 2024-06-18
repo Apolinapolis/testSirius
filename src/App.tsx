@@ -7,7 +7,7 @@ import {SchedulePage} from './components/pages/Schedule/SchedulePage';
 function App() {
   return (
     <Routes>
-      <Route path="/" element={<SchedulePage />} />
+      <Route path="/calendar" element={<SchedulePage />} />
       <Route path="/login" element={<Login />} />
       <Route path="/register" element={<RegisterPage />} />
     </Routes>

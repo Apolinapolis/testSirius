@@ -41,13 +41,17 @@
     margin-right: 8px;
 }
 
-.sidebarItem.active,
 .sidebarItem:hover {
     background-color: #8D7FC7;
     color: white;
     display: flex;
     border-radius: 0 30px 30px 0;
-  
+}
+.sidebarItemActive {
+    background-color: #8D7FC7;
+    color: white;
+    display: flex;
+    border-radius: 0 30px 30px 0;
 }
 
 .sidebarFooter {

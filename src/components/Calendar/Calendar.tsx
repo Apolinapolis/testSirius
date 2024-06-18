@@ -25,8 +25,8 @@ const Calendar = () => {
 
         return (
           <div key={index} className={`${styles.lesson} ${lessonClass}`}>
-            <span>{startTime} - {endTime}</span>
-            <span>{lesson.title}</span>
+            <div>{startTime} - {endTime}</div>
+            <div>{lesson.title}</div>
           </div>
         );
       });
@@ -42,7 +42,6 @@ const Calendar = () => {
     const prevMonthYear = currentMonth === 0 ? currentYear - 1 : currentYear;
     const prevMonthDays = daysInMonth(prevMonth, prevMonthYear);
 
-    // Fill initial empty cells with previous month's days
     for (let i = firstDay - 2; i >= 0; i--) {
       const date = new Date(prevMonthYear, prevMonth, prevMonthDays - i);
       cells.push(

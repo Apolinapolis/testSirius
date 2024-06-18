@@ -1,9 +1,13 @@
 .container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding-top: 50px;
-  max-width: 330px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  min-width: 340px;
+}
+
+.logoContain {
+  text-align: center;
 }
 
 .escapeHatches {

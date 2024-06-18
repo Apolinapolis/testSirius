@@ -25,7 +25,7 @@ export function Login() {
                     id: user.uid,
                     token: user.refreshToken,
                 }));
-                navigate("/")
+                navigate("/calendar")
 
             })
             .catch(() => alert('invalid user'))

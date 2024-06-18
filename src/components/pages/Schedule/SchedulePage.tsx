@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom"
+import { useNavigate,  } from "react-router-dom"
 import { useAuth } from "../../../hooks/useAuth"
 import { removeUser } from "../../../store/slices/userSlice"
 import { useAppDispatch } from "../../../hooks/redux-hooks"
@@ -7,15 +7,26 @@ import {Sidebar} from '../../Sidebar/Sidebar';
 import styles from './SchedulePage.module.css';
 import { Header } from "../../Header/Header";
 import { Head } from "../../Head/Head";
+import { useEffect } from "react";
 
 
 
 export const SchedulePage: React.FC = () => {
 
   const dispatch = useAppDispatch()
+  const navigate = useNavigate()
   const { isAuth, email } = useAuth()
 
-  return isAuth ? (
+  useEffect(() => {
+    if (!isAuth) {
+      navigate('/login');
+    }
+  }, [isAuth, navigate]);
+
+
+ 
+
+  return (
     <div className={styles.container}>  
       <Sidebar />
       <Header />
@@ -24,11 +35,4 @@ export const SchedulePage: React.FC = () => {
       {/* <button onClick={() => dispatch(removeUser())}> Log out from {email} </button> */}
     </div>
   )
-    : (
-      <div>
-        <h1>Пользователь не авторизован</h1>
-        <Link to={"/login"}>Сменить учетные данные</Link>
-      </div>
-    )
-
 }

@@ -25,7 +25,7 @@ export const Sidebar: React.FC = () => {
   }
 
   const items = [
-    { text: 'Главная', icon: home, path: '/login' },
+    { text: 'Главная', icon: home, path: '/' },
     { text: 'Расписание', icon: list, path: '/calendar' },
     { text: 'Оплата', icon: pay, path: '/login' },
     { text: 'Достижения', icon: achievement, path: '/login' },

@@ -1,28 +1,36 @@
-import { Link } from "react-router-dom"
+import styles from './MainPage.module.css';
+import { Sidebar } from '../../Sidebar/Sidebar';
+import { Header } from "../../Header/Header";
+import { useNavigate } from "react-router-dom"
 import { useAuth } from "../../../hooks/useAuth"
-import { removeUser } from "../../../store/slices/userSlice"
 import { useAppDispatch } from "../../../hooks/redux-hooks"
-import {Sidebar} from '../../Sidebar/Sidebar';
-import styles from './SchedulePage.module.css';
+import { useEffect } from "react";
+import { removeUser } from "../../../store/slices/userSlice"
+import { HomePageGrid } from '../../HomePageGrid/HomeGrid';
 
 
 
-export const SchedulePage: React.FC = () => {
+export const MainPage: React.FC = () => {
 
   const dispatch = useAppDispatch()
+  const navigate = useNavigate()
   const { isAuth, email } = useAuth()
 
-  return isAuth ? (
+  useEffect(() => {
+    if (!isAuth) {
+      navigate('/login');
+    }
+  }, [isAuth, navigate]);
+
+
+
+
+  return (
     <div className={styles.container}>
       <Sidebar />
-      <button onClick={() => dispatch(removeUser())}> Log out from {email} </button>
+      <Header />
+      <HomePageGrid />
+      {/* <button onClick={() => dispatch(removeUser())}> Log out from {email} </button> */}
     </div>
   )
-    : (
-      <div>
-        <h1>Пользователь не авторизован</h1>
-        <Link to={"/login"}>Сменить учетные данные</Link>
-      </div>
-    )
-
 }

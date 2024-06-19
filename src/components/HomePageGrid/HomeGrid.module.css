@@ -1,0 +1,7 @@
+
+.homePageGrid {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding-top: 6px;
+}

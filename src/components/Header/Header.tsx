@@ -21,7 +21,7 @@ export const Header: React.FC = () => {
         <header className={styles.header}>
             <div className={styles.greeting}><h2>Добро пожаловать, <span>Михаил</span>!</h2></div>
             <div onClick={handleToggleUserChange}><img src={chat} alt="ops" /></div>
-            {showUserChange && <UserChange onChangeUser={handleChangeUser} />}
+            {showUserChange && <UserChange onChangeUser={handleChangeUser} close={handleToggleUserChange}/>}
         </header>
     )
 }

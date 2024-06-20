@@ -7,21 +7,46 @@
   z-index: 1000;
   border: 1px solid #7362bc;
   border-radius: 12px;
-  padding: 30px;
+  padding: 12px 30px 30px 30px;
   width: 250px;
   height: 262px;
 }
 
-.button {
-  display: block;
-  width: 100%;
-  padding: 8px;
-  margin: 5px 0;
-  background-color: #f0f0f0;
-  border: none;
+.crossContainer {
+  display: flex;
+  justify-content: end;
   cursor: pointer;
 }
 
-.button:hover {
-  background-color: #e0e0e0;
+.WindowHeader {
+  font-size: 16px;
+  font-weight: 400;
+  color: #323854;
+  margin-bottom: 12px;
+}
+
+.child {
+  border-radius: 12px;
+  height: 48px;
+  margin-bottom: 8px;
+}
+
+.child:hover {
+  cursor: pointer;
+  background: #eef;
+}
+
+.line {
+  stroke: #eef;
+  display: flex;
+  margin: 12px auto;
+  
+}
+
+.exit {
+  display: flex;
+  justify-content: space-between;
+  color: #008aff;
+  font-size: 16px;
+  cursor: pointer;
 }

@@ -1,20 +1,22 @@
+
+import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { setPreviousMonth, setNextMonth, setToday, Lesson } from '../../store/slices/CalendarSlice';
 import styles from './Calendar.module.css';
 import { RootState } from '../../store';
 
-const Calendar = () => {
+const Calendar: React.FC = () => {
   const dispatch = useDispatch();
-  const { lessons, currentMonth, currentYear } = useSelector((state:RootState) => state.calendar); 
+  const { lessons, currentMonth, currentYear, selectedDate } = useSelector((state: RootState) => state.calendar);
 
   const daysInMonth = (month: number, year: number) => new Date(year, month + 1, 0).getDate();
   const firstDayOfMonth = (month: number, year: number) => new Date(year, month, 1).getDay();
 
-  const renderLessons = (date:Date) => {
+  const renderLessons = (date: Date) => {
     const today = new Date();
     return lessons
-      .filter((lesson:Lesson) => lesson.date.toDateString() === date.toDateString())
-      .map((lesson:Lesson, index:number) => {
+      .filter((lesson: Lesson) => lesson.date.toDateString() === date.toDateString())
+      .map((lesson: Lesson, index: number) => {
         let lessonClass = '';
         if (date < today) lessonClass = styles.pastLesson;
         else if (date.toDateString() === today.toDateString()) lessonClass = styles.todayLesson;
@@ -37,7 +39,6 @@ const Calendar = () => {
     const firstDay = firstDayOfMonth(currentMonth, currentYear) || 7;
     const cells = [];
 
-    // Previous month's days
     const prevMonth = currentMonth === 0 ? 11 : currentMonth - 1;
     const prevMonthYear = currentMonth === 0 ? currentYear - 1 : currentYear;
     const prevMonthDays = daysInMonth(prevMonth, prevMonthYear);
@@ -52,11 +53,13 @@ const Calendar = () => {
       );
     }
 
-    // Current month's days
     for (let day = 1; day <= totalDays; day++) {
       const date = new Date(currentYear, currentMonth, day);
+      const isToday = new Date().toDateString() === date.toDateString();
+      const isSelected = selectedDate && selectedDate.toDateString() === date.toDateString();
+
       cells.push(
-        <div className={styles.cell} key={day}>
+        <div className={`${styles.cell} ${isToday ? styles.today : ''} ${isSelected ? styles.selected : ''}`} key={day}>
           <div className={`${styles.dateNumber} ${styles.currentMonth}`}>{day}</div>
           {renderLessons(date)}
         </div>
@@ -87,11 +90,11 @@ const Calendar = () => {
   return (
     <div className={styles.calendarContainer}>
       <div className={styles.controls}>
-      <div className={styles.arrowBack} onClick={() => dispatch(setPreviousMonth())}></div>
-      <h2 className={styles.dateText}>{monthNames[currentMonth]} {currentYear}</h2>
-      <div className={styles.arrowForw} onClick={() => dispatch(setNextMonth())}></div>
-      <div className={styles.todayBtn} onClick={() => dispatch(setToday())}>Сегодня</div>
-      <div className={styles.questionBtn}></div>
+        <div className={styles.arrowBack} onClick={() => dispatch(setPreviousMonth())}></div>
+        <h2 className={styles.dateText}>{monthNames[currentMonth]} {currentYear}</h2>
+        <div className={styles.arrowForw} onClick={() => dispatch(setNextMonth())}></div>
+        <div className={styles.todayBtn} onClick={() => dispatch(setToday())}>Сегодня</div>
+        <div className={styles.questionBtn}></div>
       </div>
       <div className={styles.weekDays}>
         {weekDays.map((day, index) => (

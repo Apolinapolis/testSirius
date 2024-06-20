@@ -1,4 +1,4 @@
-import { createSlice, PayloadAction } from '@reduxjs/toolkit';
+import { PayloadAction, createSlice } from '@reduxjs/toolkit';
 
 
 export interface Lesson {
@@ -9,6 +9,7 @@ export interface Lesson {
 interface CalendarState {
   currentMonth: number;
   currentYear: number;
+  selectedDate: Date | null;
   lessons: Lesson[];
 }
 
@@ -16,6 +17,7 @@ interface CalendarState {
 const initialState:CalendarState = {
   currentMonth: new Date().getMonth(),
   currentYear: new Date().getFullYear(),
+  selectedDate: null,
   lessons: [
     ...generateLessons(new Date(2024, 0, 1), new Date(2024, 11, 31))
   ],
@@ -60,7 +62,10 @@ const calendarSlice = createSlice({
       const today = new Date();
       state.currentMonth = today.getMonth();
       state.currentYear = today.getFullYear();
-    }
+    },
+    setSelectedDate: (state, action: PayloadAction<Date>) => {
+      state.selectedDate = action.payload;
+    },
   }
 });
 

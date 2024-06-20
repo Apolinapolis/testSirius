@@ -143,3 +143,12 @@
   border: 0.50px solid #bbe7b9;
   background-color: #dff0d8;
 }
+
+.todayLesson {
+  border: 1px solid red;
+  color: red;
+}
+
+.today {
+  color: red;
+}

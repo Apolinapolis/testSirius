@@ -1,7 +1,7 @@
 {
   "name": "sirius",
   "version": "0.1.0",
-  "homepage": "https://Apolinapolis.github.io/react-gh-pages",
+  "homepage": "https://Apolinapolis.github.io/testSirius",
   "private": true,
   "dependencies": {
     "@reduxjs/toolkit": "^2.2.5",

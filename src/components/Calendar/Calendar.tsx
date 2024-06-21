@@ -5,7 +5,7 @@ import { setPreviousMonth, setNextMonth, setToday, Lesson } from '../../store/sl
 import styles from './Calendar.module.css';
 import { RootState } from '../../store';
 
-const Calendar: React.FC = () => {
+export const Calendar: React.FC = () => {
   const dispatch = useDispatch();
   const { lessons, currentMonth, currentYear, selectedDate } = useSelector((state: RootState) => state.calendar);
 
@@ -107,5 +107,3 @@ const Calendar: React.FC = () => {
     </div>
   );
 };
-
-export default Calendar;

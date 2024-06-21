@@ -1,7 +1,7 @@
 import styles from "./Head.module.css"
 
 
-export function Head() {
+export const Head:React.FC = () => {
     return (
         <div className={styles.head}>
                 <select name="lesson" id="lessonSelect">

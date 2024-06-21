@@ -1,10 +1,10 @@
 import styles from './MainPage.module.css';
-import { Sidebar } from '../../Sidebar/Sidebar';
-import { Header } from "../../Header/Header";
+import { Sidebar } from '../../components/Sidebar/Sidebar';
+import { Header } from "../../components/Header/Header";
 import { useNavigate } from "react-router-dom"
-import { useAuth } from "../../../hooks/useAuth"
+import { useAuth } from "../../hooks/useAuth"
 import { useEffect } from "react";
-import { HomePageGrid } from '../../HomePageGrid/HomeGrid';
+import { HomePageGrid } from '../../components/HomePageGrid/HomeGrid';
 
 
 
@@ -18,9 +18,6 @@ export const MainPage: React.FC = () => {
       navigate('/login');
     }
   }, [isAuth, navigate]);
-
-
-
 
   return (
     <div className={styles.container}>

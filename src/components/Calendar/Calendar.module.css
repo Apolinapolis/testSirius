@@ -123,7 +123,6 @@
 }
 
 .lesson div {
-
   color: #323854;
   height: 12px;
   font-size: 12px;
@@ -134,19 +133,13 @@
   text-decoration: line-through;
 }
 
-.todayLesson {
-  color: red;
-  border: 1px solid red;
-}
-
 .futureLesson {
   border: 0.50px solid #bbe7b9;
   background-color: #dff0d8;
 }
 
-.todayLesson {
-  border: 1px solid red;
-  color: red;
+.today .pastLesson {
+  text-decoration:none;
 }
 
 .today {

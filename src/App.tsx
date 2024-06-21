@@ -1,11 +1,10 @@
 import { Routes, Route } from 'react-router-dom'
-import { RegisterPage } from './components/pages/SignUp/SignUp';
-import { Login } from './components/pages/Login/Login';
-import {SchedulePage} from './components/pages/Schedule/SchedulePage';
-import { MainPage } from './components/pages/Main/MainPage';
+import { RegisterPage } from './pages/SignUp/SignUp';
+import { Login } from './pages/Login/Login';
+import {SchedulePage} from './pages/Schedule/SchedulePage';
+import { MainPage } from './pages/Main/MainPage'
 
-
-function App() {
+const App:React.FC = () => {
   return (
     <Routes>
       <Route path="/" element={<MainPage />} />

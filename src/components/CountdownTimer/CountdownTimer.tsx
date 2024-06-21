@@ -1,8 +1,8 @@
 
+import styles from './CountdownTimer.module.css';
 import React, { useLayoutEffect, useState } from 'react';
 import { useSelector } from 'react-redux';
 import { RootState } from '../../store';
-import styles from './CountdownTimer.module.css';
 
 export const CountdownTimer: React.FC = () => {
   const lessons = useSelector((state: RootState) => state.calendar.lessons);
